@@ -1,0 +1,57 @@
+version: '2'
+services:
+  dst-server:
+    image: chest/dst
+    volumes:
+      - "/data/dst/Master/save:/game/DoNotStarveTogether/Cluster_1/Master/save"
+      - "/data/dst/Caves/save:/game/DoNotStarveTogether/Cluster_1/Caves/save"
+      - "/data/dst/modoverrides.lua:/game/DoNotStarveTogether/Cluster_1/Master/modoverrides.lua"
+      - "/data/dst/modoverrides.lua:/game/DoNotStarveTogether/Cluster_1/Caves/modoverrides.lua"
+    ports:
+      - "10999:10999"
+      - "10888:10888"
+    network_mode: "host"
+    environment:
+      - DST_CLUSTER_TOKEN=pds-g^KU_L8KAOPET^MThOi6sItdPHmFaLXqvaiEw82OqW0IHmL4glRO5Jqs0=
+      - DST_SERVER_DESC=You can play as a creature until you select a character! And we have caves!
+      - DST_GAME_MODE=endless
+      - DST_SERVER_NAME=24/7 CHEST.ONE
+      - DST_SHARD_ENABLE=true
+      - DST_PVP=true
+      - DST_PAUSE_WHEN_EMPTY=true
+      - DST_VOTE_ENABLED=false
+      - DST_CONSOLE_ENABLED=false
+      # 463718554 - Fix Multiplayer
+      # 1454852548 - Morty
+      # 374341561 - Fionna
+      # 496205036 - Apothecary Medicamento
+      # 742895252 - Safe Chest
+      # 497883137 - Finn the Human
+      # 916508459 - Rick Sanchez
+      # 463554075 - Wilton the Haunted
+      # 352373173 - Gesture Wheel (Колесо эмоций)
+      # 1486273598 - Beefalo Settings (Taming, Riding, Loot etc.)
+      ## 784729547 - Globalastick's Halloween Mod
+      # 1171138081 - Treats for Webber
+      # 381004387 - The Tallbird Mod
+      # 1079538195 - Moving Box
+      # 921583679 - New Old Bell
+      # 900608347 - Alternative Spells
+      # 785295023 - Super Wall DST
+      # 622471256 - Playable Pets
+
+      # 622596425 - Playable Pets -Caves
+      # 678656172 - Playable Pets -Cute
+      # 622612446 - Playable Pets -SW
+      # 756552403 - Playable Pets -New Reigns
+      # 876551038 - Playable Pets SW Skins
+      # 1134686272 - Playable Pets SW Asset Pack
+      # 1179982849 - Playable Pets -Event
+      # 1203153454 - Playable Pets -Partners
+      # 1547216819 - Playable Pets -Hamlet [BETA]
+      # 1547209957 - PP Hamlet Assets
+      # 721491336 - IJN DD - Hibiki
+      # 1695162924 - Megumin - The Chuuni Arch Wizzard
+      # 664144071 - West
+      - DST_GENERAL_MODS=463718554,1454852548,374341561,496205036,742895252,497883137,916508459,463554075,352373173,1486273598,1171138081,381004387,1079538195,921583679,900608347,785295023,622471256,1695162924,664144071
+      #,622596425,678656172,622612446,756552403,876551038,1134686272,1179982849,1203153454,1547216819,1547209957,721491336
