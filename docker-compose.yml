@@ -15,7 +15,7 @@ services:
       - DST_CLUSTER_TOKEN=pds-g^KU_L8KAOPET^MThOi6sItdPHmFaLXqvaiEw82OqW0IHmL4glRO5Jqs0=
       - DST_SERVER_DESC=You can play as a creature until you select a character! And we have caves!
       - DST_GAME_MODE=endless
-      - DST_SERVER_NAME=24/7 CHEST.ONE
+      - DST_SERVER_NAME=24/7 CHEST.ONE (ENDLESS, CAVES, EU/RU)
       - DST_SHARD_ENABLE=true
       - DST_PVP=true
       - DST_PAUSE_WHEN_EMPTY=true
