@@ -1,6 +1,9 @@
 version: '2'
 services:
   dst-server:
+    entrypoint: /usr/bin/entrypoint
+    command: /bin/s6-svscan /etc/s6
+    #
     image: chest/dst
     volumes:
       - "/data/dst/Master/save:/game/DoNotStarveTogether/Cluster_1/Master/save"
@@ -12,6 +15,9 @@ services:
       - "10888:10888"
     network_mode: "host"
     environment:
+      - DEBIAN_FRONTEND=noninteractive
+      - CRON_ENABLED=false
+      #
       - DST_CLUSTER_TOKEN=pds-g^KU_L8KAOPET^MThOi6sItdPHmFaLXqvaiEw82OqW0IHmL4glRO5Jqs0=
       - DST_SERVER_DESC=You can play as a creature until you select a character! And we have caves!
       - DST_GAME_MODE=endless
